@@ -1,0 +1,166 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Themes
+  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "GitHub Light",
+    "dark": "Tokyo Night"
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  // Title Bar
+  "title_bar": {
+    "show_user_menu": true,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_icon": false,
+    "show_user_picture": false,
+    "show_sign_in": false
+  },
+  // Tabs and tab bar
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "tabs": {
+    "file_icons": false,
+    "git_status": true
+  },
+  // Toolbar
+  "toolbar": {
+    "quick_actions": false
+  },
+  // Status bar
+  "status_bar": {
+    "cursor_position_button": false
+  },
+  "inline_code_actions": true,
+  "use_system_window_tabs": false,
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "collaboration_panel": {
+    "dock": "left",
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "debugger": {
+    "button": true,
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true
+  },
+  "outline_panel": {
+    "dock": "left",
+    "button": true
+  },
+  "project_panel": {
+    "dock": "left",
+    "button": true,
+    "indent_size": 15.0,
+    "default_width": 240.0
+  },
+  "show_whitespaces": "all",
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font Mono"
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "auto_indent": "syntax_aware",
+  
+  // Languages
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "ty",
+        "!basedpyright",
+        "ruff"
+      ],
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    }
+  },
+  // LSPs
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  }
+}
