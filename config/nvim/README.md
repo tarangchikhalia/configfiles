@@ -383,7 +383,6 @@ nvim
 | `gofumpt` | Go formatting |
 | `shfmt` | Shell formatting |
 | `eslint_d` | JS/TS linting |
-| `pylint` | Python linting |
 
 ---
 

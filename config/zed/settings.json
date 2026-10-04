@@ -8,8 +8,18 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Themes
+  "session": {
+    "trust_all_worktrees": true
+  },
   "cli_default_open_behavior": "new_window",
   "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
@@ -26,12 +36,12 @@
     }
   },
   "theme": {
-    "mode": "dark",
-    "light": "GitHub Light",
+    "mode": "system",
+    "light": "Ayu Light",
     "dark": "Tokyo Night"
   },
   "icon_theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark"
   },
@@ -40,7 +50,6 @@
     "show_user_menu": true,
     "show_onboarding_banner": false,
     "show_project_items": false,
-    "show_branch_icon": false,
     "show_user_picture": false,
     "show_sign_in": false
   },
@@ -116,7 +125,7 @@
       "function": false
     }
   },
-  "base_keymap": "VSCode",
+  "base_keymap": "Zed",
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,

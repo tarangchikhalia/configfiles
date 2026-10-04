@@ -146,7 +146,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         "stylua", "prettierd", "black", "isort", "gofumpt", "shfmt",
-        "eslint_d", "pylint",
+        "eslint_d",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -206,7 +206,6 @@ return {
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
-        python = { "pylint" },
       }
       local lint_augroup = vim.api.nvim_create_augroup("user_lint", { clear = true })
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

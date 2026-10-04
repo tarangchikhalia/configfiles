@@ -7,62 +7,74 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        },
-        "javascript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
-      },
-      "enable_lsp_tasks": true
-    }
+  // Themes
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "cli_default_open_behavior": "new_window",
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
   },
   "agent_servers": {
-    "opencode": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
       "type": "registry"
     }
   },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434"
-    }
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Tokyo Night"
   },
-  "inline_code_actions": true,
-  "use_system_window_tabs": false,
-  "tabs": {
-    "file_icons": false,
-    "git_status": true
+  "icon_theme": {
+    "mode": "system",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
   },
+  // Title Bar
+  "title_bar": {
+    "show_user_menu": true,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_icon": false,
+    "show_user_picture": false,
+    "show_sign_in": false
+  },
+  // Tabs and tab bar
   "tab_bar": {
     "show_tab_bar_buttons": true,
     "show_nav_history_buttons": false,
     "show": true
   },
+  "tabs": {
+    "file_icons": false,
+    "git_status": true
+  },
+  // Toolbar
+  "toolbar": {
+    "quick_actions": false
+  },
+  // Status bar
   "status_bar": {
     "cursor_position_button": false
   },
+  "inline_code_actions": true,
+  "use_system_window_tabs": false,
   "search": {
     "button": false
   },
   "diagnostics": {
     "button": true
   },
-  "title_bar": {
-    "show_user_menu": true,
-    "show_onboarding_banner": false,
-    "show_project_items": true,
-    "show_branch_icon": false,
-    "show_user_picture": false,
-    "show_sign_in": false
-  },
   "collaboration_panel": {
+    "dock": "left",
     "button": false
   },
   "notification_panel": {
@@ -73,27 +85,22 @@
     "dock": "left"
   },
   "git_panel": {
+    "dock": "left",
     "tree_view": true
   },
   "outline_panel": {
+    "dock": "left",
     "button": true
   },
   "project_panel": {
+    "dock": "left",
     "button": true,
     "indent_size": 15.0,
     "default_width": 240.0
   },
   "show_whitespaces": "all",
-  "agent": {
-    "default_model": {
-      "provider": "ollama",
-      "model": "llama3.2:latest",
-      "enable_thinking": false
-    },
-    "enable_feedback": false
-  },
   "terminal": {
-    "font_family": "JetBrains Mono"
+    "font_family": "JetBrainsMono Nerd Font Mono"
   },
   "inlay_hints": {
     "enabled": true,
@@ -123,21 +130,40 @@
       "milliseconds": 1000
     }
   },
-  "auto_indent": true,
-  // Theming
-  "theme": {
-    "mode": "system",
-    "light": "GitHub Light",
-    "dark": "GitHub Dark"
-  },
-  "icon_theme": "Colored Zed Icons Theme Dark",
+  "auto_indent": "syntax_aware",
+  
+  // Languages
   "languages": {
     "Python": {
-      "language_servers": ["ty", "!basedpyright"],
-      "format_on_save": "on"
-    },
-    "CSS": {
-      "language_servers": ["tailwindcss-language-server"]
+      "language_servers": [
+        "ty",
+        "!basedpyright",
+        "ruff"
+      ],
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff"
+        }
+      }
+    }
+  },
+  // LSPs
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
     }
   }
 }
