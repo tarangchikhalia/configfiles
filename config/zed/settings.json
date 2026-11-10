@@ -37,8 +37,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Tokyo Night"
+    "light": "One Light",
+    "dark": "One Dark"
   },
   "icon_theme": {
     "mode": "system",
