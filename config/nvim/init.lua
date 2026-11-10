@@ -19,7 +19,6 @@ require("config.autocmds")
 require("lazy").setup({
   spec = { { import = "plugins" } },
   defaults = { lazy = false, version = false },
-  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true, notify = false },
   rocks = { enabled = false }, -- hererocks/luarocks not installed
   performance = {
