@@ -1,6 +1,16 @@
 # Neovim Configuration
 
-A modern Neovim setup built for productive software development. Powered by [lazy.nvim](https://github.com/folke/lazy.nvim) with the [Tokyo Night Moon](https://github.com/folke/tokyonight.nvim) theme.
+A modern Neovim setup built for productive software development. Powered by [lazy.nvim](https://github.com/folke/lazy.nvim) with the [GitHub theme](https://github.com/projekt0n/github-nvim-theme).
+
+## Appearance
+
+On macOS, Neovim follows the system appearance automatically: `github_dark`
+for dark mode and `github_light` for light mode. It checks at startup, when
+Neovim regains focus, and every three seconds while running.
+
+Use `:Theme light` or `:Theme dark` to override appearance for the current session,
+and `:Theme auto` to resume following macOS. On other platforms, the initial
+theme follows Neovim's `background` option; manual commands are available.
 
 ## Requirements
 
@@ -39,7 +49,7 @@ nvim
 │   │   ├── keymaps.lua       # Base keymaps (no plugins)
 │   │   └── autocmds.lua      # Autocommands
 │   └── plugins/
-│       ├── colorscheme.lua   # Tokyo Night theme
+│       ├── colorscheme.lua   # GitHub light/dark themes
 │       ├── ui.lua            # Statusline, bufferline, notifications, dashboard
 │       ├── editor.lua        # Autopairs, surround, comments, which-key, flash
 │       ├── treesitter.lua    # Syntax highlighting + text objects
@@ -391,7 +401,7 @@ nvim
 | Plugin | Purpose |
 |--------|---------|
 | `lazy.nvim` | Plugin manager |
-| `tokyonight.nvim` | Color scheme (moon variant) |
+| `github-theme` | Color scheme (github_dark / github_light) |
 | `lualine.nvim` | Status line |
 | `bufferline.nvim` | Buffer tab bar |
 | `noice.nvim` | Better cmdline/messages UI |
